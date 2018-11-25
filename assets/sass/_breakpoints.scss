@@ -1,0 +1,21 @@
+// No media query for smaller than 576px as it is mobile-first design
+
+// Small devices (landscape phones, 576px and up)
+@mixin landscape-phone-up {
+	@media (min-width: 576px) { @content; }
+}
+
+// Medium devices (tablets, 768px and up)
+@mixin tablet-portrait-up {
+	@media (min-width: 768px) { @content; }
+}
+
+// Large devices (desktops, 992px and up)
+@mixin tablet-landscape-up {
+	@media (min-width: 992px) { @content; }
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@mixin desktop-up {
+	@media (min-width: 1200px) { @content; }
+}

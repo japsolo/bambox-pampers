@@ -1,0 +1,31 @@
+/* CSS Document */
+/* Project name: BAMBOX */
+/* File name: app.css */
+/* Description: Global Style Sheets */
+/* Creation date: November 2018 */
+/* Author: Javier Herrera */
+/* Author's eMail: contacto@javier-herrera.com */
+/* Version: 1.0 */
+/* WARNING: Please don't edit this stylesheet. If you want to add/delete/modify some css rules, go to the "sass" folder and edit the corresponding file */
+/* COMPILER: You can compile with node-sass, npm gulp, laravel-mix or another  */
+
+// variables [base file - dont delete]
+@import 'variables';
+
+// breakpoints [base file - dont delete]
+@import 'breakpoints';
+
+// mixins [base file - dont delete]
+@import 'mixins';
+
+// main [base file - dont delete]
+@import 'main';
+
+// grid-system [base file - dont delete]
+@import 'grid';
+
+// elements (general components for all views)
+@import 'elements';
+
+// landing-pampers
+@import 'landing-pampers';

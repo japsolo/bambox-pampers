@@ -1,0 +1,219 @@
+/******************************/
+/*========= BUTTONS =========*/
+/****************************/
+.btn {
+	height: 70rem;
+	padding: 0 1.5em;
+	border-radius: 35rem;
+	text-transform: uppercase;
+	font-size: 23rem;
+	margin: 1em 0;
+	font-weight: 700;
+	text-decoration: none;
+	@include box-shadow(0 0 1px rgba(black, 0.4));
+	@include flex-box($df: inline-flex, $ai: center, $jc: flex-start);
+	@include transition(all 420ms ease);
+	img {
+		width: 20%;
+		max-width: 45px;
+		margin-left: auto;
+	}
+}
+
+.btn-green {
+	background-color: $green;
+	color: $white;
+	&:hover {
+		background-color: $green-hover;
+	}
+}
+
+.btn-white {
+	background-color: $white;
+	color: $blue;
+	&:hover {
+		color: $white;
+		background-color: darken($white, 30);
+	}
+}
+
+.btn-txt-centered {
+	@include justify-content(center)
+}
+
+
+/***********************************/
+/*========= PRODUCT-ITEM =========*/
+/*********************************/
+.product-item {
+	border: solid 1px lighten($grey, 20);
+	border-radius: 10rem;
+	padding: 15rem;
+	overflow: hidden;
+	position: relative;
+	@include transition(all 320ms ease);
+	.btn {
+		@include display-flex(flex)
+		margin: 0 auto;
+	}
+	&:hover {
+		box-shadow: 0 0 10px $grey;
+	}
+}
+
+.product-item-main-ribbon {
+	background-color: #FFA324;
+	font-size: 20rem;
+	color: $white;
+	padding: 5px;
+	text-align: center;
+	position: absolute;
+	width: 100%;
+	right: 0;
+	top: -60px;
+	@include transform(rotate(45deg) translateX(45%));
+}
+
+.product-item-image {
+	@include flex-box($jc: center)
+	img {
+		width: 90%;
+	}
+}
+
+.product-item-category {
+	font-weight: 500;
+	font-size: 20rem;
+	margin-bottom: 0;
+	color: $dark-light-grey;
+}
+
+.product-item-name {
+	font-weight: 500;
+	font-size: 27rem;
+	margin: 0;
+	color: $blue;
+}
+
+.stars-list {
+	@include flex-box
+	li {
+		width: 12px;
+		height: 12px;
+		margin: 10px 5px 10px 0;
+		&.star {
+			background: url($ASSETS_PATH + 'icon-star.svg') center center / cover no-repeat;
+		}
+		&.star-half {
+			background: url($ASSETS_PATH + 'icon-star-half.svg') center center / cover no-repeat;
+		}
+	}
+}
+
+.product-item-size-title {
+	text-align: center;
+	font-weight: 700;
+	font-size: 18rem;
+	margin: 0 0 5px;
+	position: relative;
+	&::after {
+		content: '';
+		width: 100%;
+		height: 1px;
+		background-color: lighten($dark-light-grey, 40);
+		position: absolute;
+		left: 0;
+		top: 50%;
+	}
+	span {
+		display: inline-block;
+		background-color: $white;
+		padding: 5px 20px;
+		position: relative;
+		z-index: 1;
+	}
+}
+
+.product-item-size-options {
+	@include flex-box($jc: space-between, $fw: wrap);
+	li {
+		width: 47px;
+		font-size: 25rem;
+		padding: 20rem 0;
+		border-radius: 10rem;
+		border: solid 1px;
+		color: lighten($dark-light-grey, 15);
+		cursor: pointer;
+		@include flex-box($jc: center, $ai: center);
+		@include transition(all 320ms ease);
+		&:hover,
+		&.active {
+			background-color: $blue;
+			border-color: $blue;
+			color: $white;
+		}
+	}
+}
+
+.product-item-discount {
+	margin: 50px -15rem 20px -15rem;
+	@include flex-box($fw: wrap, $ai: center)
+}
+
+.product-item-discount-ribbon {
+	background-color: $orange;
+	color: $white;
+	width: 145px;
+	height: 45px;
+	font-size: 16px;
+	font-weight: 500;
+	padding-left: 15rem;
+	position: relative;
+	overflow: hidden;
+	@include flex-box($jc: center, $fw: wrap, $fd: column)
+	&::after {
+		content: '';
+		width: 45px;
+		height: 45px;
+		background-color: $white;
+		position: absolute;
+		right: 0;
+		top: 0;
+		@include transform(translateX(50%) rotate(45deg));
+	}
+	span {
+		&:last-of-type {
+			font-size: 14px;
+		}
+	}
+}
+
+.product-item-discount-description {
+	margin-left: auto;
+	margin-right: 15rem;
+	@include flex-box($fd: column, $ai: flex-end, $jc: center);
+	[class^=txt] {
+		font-weight: 500;
+	}
+	.txt-sm {
+		font-size: 15rem;
+	}
+	.txt-md {
+		font-size: 17rem;
+	}
+	.txt-lg {
+		font-size: 21rem;
+	}
+	.txt-grey {
+		color: $grey;
+	}
+	.txt-orange {
+		color: $orange;
+	}
+	.txt-black {
+		color: #000000;
+	}
+	.txt-line-through {
+		text-decoration: line-through;
+	}
+}

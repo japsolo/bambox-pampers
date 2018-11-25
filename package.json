@@ -1,0 +1,24 @@
+{
+  "name": "landing_bambox",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build-css": "node-sass --source-map true --include-path scss assets/sass/app.scss public/css/app.css --importer node_modules/node-sass-import",
+    "min-css": "node-sass --output-style compressed --include-path sass assets/sass/app.scss public/css/app.min.css",
+    "watch-css": "nodemon -e scss -x \"npm run build-css\"",
+    "server": "nodemon & browser-sync start --proxy 'localhost:8888' --files='views/**/*.ejs, public/**/*.css'",
+    "start": "npm run server & npm run watch-css"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.26.3",
+    "ejs": "^2.6.1",
+    "express": "^4.16.4",
+    "node-sass": "^4.10.0",
+    "node-sass-import": "^2.0.1"
+  }
+}
