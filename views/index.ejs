@@ -518,17 +518,17 @@
 		<script>
 		/* global $ */
 		$('#products-carousel').owlCarousel({
-			loop: true,
+			loop: false,
 			dots: true,
 			responsiveClass: true,
-			items: 1,
 			responsive: {
+				0: { items: 1 },
 				768: { items: 2 },
 				992: { items: 3 }
 			}
 		});
 		$('#testimonies-carousel').owlCarousel({
-			loop: true,
+			loop: false,
 			dots: true,
 			margin: 10,
 			responsiveClass: true,

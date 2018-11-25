@@ -2508,7 +2508,6 @@ body.landing-pampers {
   width: 40%; }
 
 .landing-pampers-pattern {
-  display: none;
   width: 120vw;
   height: 110px;
   background-size: 360px;
@@ -2880,9 +2879,9 @@ body.landing-pampers {
   position: relative;
   margin-top: 100px;
   padding: 50px 0;
-  position: relative; }
+  position: relative;
+  overflow: hidden; }
   .faq-wrapper::after, .faq-wrapper::before {
-    display: none;
     content: '';
     width: 100%;
     height: 40px;
@@ -3093,9 +3092,9 @@ body.landing-pampers {
 .footer-map {
   position: relative;
   margin-top: 30px;
-  line-height: 0; }
+  line-height: 0;
+  overflow: hidden; }
   .footer-map::before {
-    display: none;
     content: '';
     width: 100%;
     height: 30px;
