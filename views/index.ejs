@@ -504,10 +504,25 @@
 		<!-- JS -->
 		<script>
 			let faqQuestions = Array.from(document.querySelectorAll('.faq-question'));
+			let sizeOptions = Array.from(document.querySelectorAll('.product-item-size-options li'));
 
 			faqQuestions.forEach(question => {
 				question.addEventListener('click', () => {
 					let self = question;
+					self.classList.toggle('active');
+				});
+			});
+
+			sizeOptions.forEach((option, i) => {
+				option.addEventListener('click', () => {
+					let self = option;
+					let parentsChilds = Array.from(self.parentElement.querySelectorAll('li'));
+					let sizeValue = self.innerText;
+					parentsChilds.forEach(sibling => {
+						if (sibling.innerText !== sizeValue) {
+							sibling.classList.remove('active');
+						}
+					});
 					self.classList.toggle('active');
 				});
 			});
